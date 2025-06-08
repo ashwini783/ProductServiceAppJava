@@ -2,6 +2,7 @@ package productservices.productservice.controllers;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
+import productservices.productservice.dtos.ErrorResponseDto;
 import productservices.productservice.dtos.products.*;
 import productservices.productservice.models.Product;
 import productservices.productservice.services.ProductService;
@@ -63,4 +64,14 @@ public class ProductController {
     public void replaceProduct() {   //put
 
     }
+
+//    @ExceptionHandler(RuntimeException.class)
+//    public ErrorResponseDto handleException(RuntimeException e) {
+//        ErrorResponseDto dto=new ErrorResponseDto();
+//        dto.setMessage(e.getMessage());
+//        dto.setStatus("ERROR");
+//        return dto;
+//    }
 }
+
+//controller advices gave additional filtration that may change the controller response,

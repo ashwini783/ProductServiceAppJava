@@ -32,7 +32,7 @@ public class ProductServiceFakeStoreImpl implements ProductService {
 
         requestDto.setTitle(product.getTitle());
         requestDto.setDescription(product.getDescription());
-        requestDto.setCategory(product.getCategoryName());
+        requestDto.setCategory(product.getCategory().getName());
         requestDto.setImage(product.getImageUrl());
         requestDto.setPrice(product.getPrice());
         FakeStoreCreateProductResponseDto responseDto = restTemplate.postForObject("https://fakestoreapi.com/products", requestDto, FakeStoreCreateProductResponseDto.class);
